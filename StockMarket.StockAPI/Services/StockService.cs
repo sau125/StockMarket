@@ -200,5 +200,6 @@ namespace StockMarket.StockAPI.Services
             }
             
         }
+
     }
 }

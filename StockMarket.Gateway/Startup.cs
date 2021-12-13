@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
+
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using System;
@@ -28,12 +28,17 @@ namespace StockMarket.Gateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOcelot();
-
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
+            //Confiture Cors Service
+            services.AddCors(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "StockMarket.Gateway", Version = "v1" });
+                c.AddPolicy("AllowOrigin", options =>
+       options.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                );
             });
+            //services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,12 +47,11 @@ namespace StockMarket.Gateway
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "StockMarket.Gateway v1"));
+                
             }
 
             app.UseRouting();
-
+            app.UseCors("AllowOrigin"); //add Cors Middleware
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

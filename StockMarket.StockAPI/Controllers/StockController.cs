@@ -139,7 +139,7 @@ namespace StockMarket.StockAPI.Controllers
             }
         }
         [HttpPost]
-        [Route("AddCompany")]
+        [Route("AddIPO")]
         public IActionResult AddIPO(IPODetails Value)
         {
             try
@@ -217,7 +217,7 @@ namespace StockMarket.StockAPI.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPut]
         [Route("EditStockExchange")]
         public IActionResult Update(StockExchange stock)
         {
@@ -232,7 +232,8 @@ namespace StockMarket.StockAPI.Controllers
                 return Content(ex.Message);
             }
         }
-        [HttpPost]
+
+        [HttpDelete]
         [Route("delete/{id}")]
         public IActionResult Delete(string id)
         {

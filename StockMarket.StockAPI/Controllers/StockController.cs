@@ -234,7 +234,7 @@ namespace StockMarket.StockAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("delete/{id}")]
+        [Route("deleteStockExchange/{id}")]
         public IActionResult Delete(string id)
         {
             try

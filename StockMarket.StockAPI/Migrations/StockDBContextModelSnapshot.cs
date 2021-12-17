@@ -146,11 +146,14 @@ namespace StockMarket.StockAPI.Migrations
                     b.Property<double>("CurrentStockPrice")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("DateAdded")
-                        .HasColumnType("datetime");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("StockExchangeId")
                         .HasColumnType("nvarchar(3)");
+
+                    b.Property<TimeSpan>("Time")
+                        .HasColumnType("time");
 
                     b.HasKey("PriceId");
 

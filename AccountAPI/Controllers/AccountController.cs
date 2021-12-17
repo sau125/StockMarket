@@ -64,7 +64,7 @@ namespace StockMarket.AccountAPI.Controllers
                 }
 
                 if (authUser != null)
-                    return Ok(authUser);
+                    return Created("api/Created", authUser);
                 else
                 {
                     throw new Exception("User not found");

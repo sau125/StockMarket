@@ -56,6 +56,14 @@ namespace StockMarket.StockAPI
                 ValidateAudience = false
             };
         });
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options =>
+       options.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                );
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StockMarket.StockAPI", Version = "v1" });
@@ -75,7 +83,7 @@ namespace StockMarket.StockAPI
             app.UseRouting();
             app.UseAuthentication();//added this
             app.UseAuthorization();
-
+            app.UseCors("AllowOrigin");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

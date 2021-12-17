@@ -21,7 +21,10 @@ namespace StockMarket.StockAPI.Entities
         public string StockExchangeId { get; set; }
         public StockExchange StockExchange { get; set; }
 
-        [Column(TypeName = "datetime")]
-        public DateTime DateAdded { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime Date { get; set; }
+
+        [DataType(DataType.Time)]
+        public TimeSpan Time { get; set; }
     }
 }

@@ -9,7 +9,7 @@
           "Port": 29657
         }
       ],
-      "UpstreamPathTemplate": "/StockMarket/Account",
+      "UpstreamPathTemplate": "/Stockmarket/Account",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     },
     {
@@ -21,7 +21,7 @@
           "Port": 29657
         }
       ],
-      "UpstreamPathTemplate": "/StockMarket/Account/{catchall}",
+      "UpstreamPathTemplate": "/Stockmarket/Account/{catchall}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     },
     {
@@ -30,10 +30,10 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 29657
+          "Port": 11614
         }
       ],
-      "UpstreamPathTemplate": "/StockMarket/Stock",
+      "UpstreamPathTemplate": "/Stockmarket/Stock",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     },
     {
@@ -42,10 +42,34 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 29657
+          "Port": 11614
         }
       ],
-      "UpstreamPathTemplate": "/StockMarket/Stock/{catchall}",
+      "UpstreamPathTemplate": "/Stockmarket/Stock/{catchall}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Upload",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12633
+        }
+      ],
+      "UpstreamPathTemplate": "/Stockmarket/Upload",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Upload/{catchall}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12633
+        }
+      ],
+      "UpstreamPathTemplate": "/Stockmarket/Upload/{catchall}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     }
   ]

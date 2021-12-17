@@ -1,4 +1,3 @@
-C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5.0\StockMarket.StockAPI.csproj.AssemblyReference.cache
 C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5.0\StockMarket.StockAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5.0\StockMarket.StockAPI.AssemblyInfoInputs.cache
 C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5.0\StockMarket.StockAPI.AssemblyInfo.cs
@@ -59,3 +58,4 @@ C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5
 C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5.0\ref\StockMarket.StockAPI.dll
 C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5.0\StockMarket.StockAPI.pdb
 C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5.0\StockMarket.StockAPI.genruntimeconfig.cache
+C:\Users\shukl\Documents\Angular\Stockmarket\StockMarket.StockAPI\obj\Debug\net5.0\StockMarket.StockAPI.csproj.AssemblyReference.cache

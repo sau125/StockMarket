@@ -57,6 +57,14 @@ namespace AccountAPI
                 ValidateAudience = false
             };
         });
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options =>
+       options.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                );
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AccountAPI", Version = "v1" });
@@ -76,7 +84,7 @@ namespace AccountAPI
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseCors("AllowOrigin");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

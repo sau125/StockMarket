@@ -1,0 +1,46 @@
+<div class="container">
+    <!-- main app container -->
+<form [formGroup]="exchangeForm" (ngSubmit)="onSubmit()">
+    <table class="table-boardered">
+        <tr>
+            <td><label>Stock ID</label></td>
+            <td>
+                <input formControlName="id" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Stock Exchange Name</label></td>
+            <td> <input type="text" formControlName="stockexchangename" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Brief</label></td>
+            <td>
+                <input type="text" formControlName="brief"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Contact Address</label></td>
+            <td>
+                <input type="text" formControlName="contactaddress"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Remarks</label></td>
+            <td>
+                <input type="text" formControlName="remarks"  />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+               
+                    <button type="submit" class="btn-primary">Add</button> &nbsp;
+                    <button type="reset" (click)="onReset()" class="btn-info">Cancel</button>
+              
+            </td>
+        </tr>
+    </table>
+
+</form>
+</div>
+

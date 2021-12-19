@@ -1,0 +1,22 @@
+<div class="container">
+    <a [routerLink]="[ '/add-company']">Add New</a>
+     <table class="table table-bordered table-responsive">
+         <thead>
+             <tr>
+                 <th>Company Name</th>
+                 <th>Listed in Stock Exchanges</th>
+                 <th>Brief</th>
+             </tr>
+         </thead>
+         <tbody *ngFor="let company of companies">
+             <tr>
+                 <td>{{company.companyName}}</td>
+                 <td>{{company.listedInStockExchanges}}</td>
+                 <td>{{company.companyBrief}}</td>
+                 <td><button class="btn-primary" on-click='GetCompany(company.companyName)'>Edit</button></td>
+                 <td><button class="btn-primary" on-click='DeleteCompany(company.companyName)'>Delete</button></td>
+             </tr>
+         </tbody>
+     </table>
+     
+ </div>

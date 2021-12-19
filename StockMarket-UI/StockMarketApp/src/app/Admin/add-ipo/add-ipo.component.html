@@ -1,0 +1,52 @@
+<div class="container">
+    <!-- main app container -->
+<form [formGroup]="ipoForm" (ngSubmit)="onSubmit()">
+    <table class="table-boardered">
+        <tr>
+            <td><label>ID</label></td>
+            <td>
+                <input formControlName="id" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Stock Exchange Code</label></td>
+            <td> <input type="text" formControlName="stockexchangecode" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Price per Share</label></td>
+            <td>
+                <input type="text" formControlName="pricepershare"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Total Share</label></td>
+            <td>
+                <input type="text" formControlName="totalshare"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Company ID</label></td>
+            <td>
+                <input type="text" formControlName="companyid"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Remarks</label></td>
+            <td>
+                <input type="text" formControlName="remarks"  />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+               
+                    <button type="submit" class="btn-primary">Add</button> &nbsp;
+                    <button type="reset" (click)="onReset()" class="btn-info">Cancel</button>
+              
+            </td>
+        </tr>
+    </table>
+
+</form>
+</div>
+

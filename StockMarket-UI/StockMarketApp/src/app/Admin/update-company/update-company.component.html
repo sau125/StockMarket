@@ -1,0 +1,51 @@
+
+<div class="container">
+    <table class="table-boardered">
+        <tr>
+            <td><label>Company Name</label></td>
+            <td>
+                <input [(ngModel)]="company.companyName" type="text" readonly/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>CEO</label></td>
+            <td> <input type="text" [(ngModel)]="company.ceo" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Listed In Stock Exchanges</label></td>
+            <td>
+                <input type="text" [(ngModel)]="company.listedInStockExchanges" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Turnover</label></td>
+            <td>
+                <input type="text" [(ngModel)]="company.turnover" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Company Brief</label></td>
+            <td>
+                <input type="text" [(ngModel)]="company.companyBrief" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Sector ID</label></td>
+            <td>
+                <input type="text" [(ngModel)]="company.sectorID" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Company Code</label></td>
+            <td>
+                <input type="text" [(ngModel)]="company.companyCode" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                    <button class="btn-primary" on-click='Edit()'>Edit</button> &nbsp;          
+            </td>
+        </tr>
+    </table>
+</div>

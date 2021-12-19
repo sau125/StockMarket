@@ -1,0 +1,23 @@
+<div class="container">
+    <a [routerLink]="[ '/add-exchange']">Add New</a>
+     <table class="table table-bordered table-responsive">
+         <thead>
+             <tr>
+                 <th>Stock Exchange Name</th>
+                 <th>Brief</th>
+                 <th>Contact Address</th>
+             </tr>
+         </thead>
+         <tbody *ngFor="let exchange of exchanges">
+             <tr>
+                 <td>{{exchange.stockExchangeName}}</td>
+                 <td>{{exchange.brief}}</td>
+                 <td>{{exchange.contactAddress}}</td>
+                 <td><button class="btn-primary" on-click='GetExchange(exchange.stockExchangeName)'>Edit</button></td>
+                 <td><button class="btn-primary" on-click='DeleteExchange(exchange.stockExchangeName)'>Delete</button></td>
+             </tr>
+         </tbody>
+     </table>
+     
+ </div>
+

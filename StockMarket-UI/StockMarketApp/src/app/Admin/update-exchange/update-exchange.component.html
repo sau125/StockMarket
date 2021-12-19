@@ -1,0 +1,41 @@
+
+<div class="container">
+    <table class="table-boardered">
+        <tr>
+            <td><label>Stock Exchange ID</label></td>
+            <td>
+                <input [(ngModel)]="exchange.id" type="text" readonly/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Stock Exchange Name</label></td>
+            <td> <input type="text" [(ngModel)]="exchange.stockExchangeName" readonly/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Brief</label></td>
+            <td>
+                <input type="text" [(ngModel)]="exchange.brief" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Contact Address</label></td>
+            <td>
+                <input type="text" [(ngModel)]="exchange.contactAddress" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Remarks</label></td>
+            <td>
+                <input type="text" [(ngModel)]="exchange.remarks" />
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                    <button class="btn-primary" on-click='Edit()'>Edit</button> &nbsp;          
+            </td>
+        </tr>
+    </table>
+</div>
+

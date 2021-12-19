@@ -1,0 +1,44 @@
+<!-- main app container -->
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <table>
+        <tr>
+            <td><label>USER ID</label></td>
+            <td>
+                <input formControlName="userid" type="text" />
+
+            </td>
+        </tr>
+        <tr>
+            <td><label>Name</label></td>
+            <td> <input type="text" formControlName="fname" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td>
+                <input type="text" formControlName="email" />
+            </td>
+        </tr>
+        <tr>
+            <td> <label>Mobile</label></td>
+            <td>
+                <input type="text" formControlName="mobile" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td> <input type="password" formControlName="password" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div>
+                    <button type="submit">Register</button>
+                    <button type="reset" (click)="onReset()">Cancel</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+</form>

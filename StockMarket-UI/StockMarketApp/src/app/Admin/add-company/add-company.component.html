@@ -1,0 +1,63 @@
+<div class="container">
+    <!-- main app container -->
+<form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+    <table class="table-boardered">
+        <tr>
+            <td><label>Company Name</label></td>
+            <td>
+                <input formControlName="companyname" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>TurnOver</label></td>
+            <td> <input type="text" formControlName="turnover" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>CEO</label></td>
+            <td>
+                <input type="text" formControlName="ceo"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Board of Directors</label></td>
+            <td>
+                <input type="text" formControlName="boardofdirectors"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Listed In Stock Exchanges</label></td>
+            <td>
+                <input type="text" formControlName="listedinexchanges"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Brief</label></td>
+            <td>
+                <input type="text" formControlName="brief"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Sector ID</label></td>
+            <td>
+                <input type="text" formControlName="sectorid"  />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Company Code</label></td>
+            <td>
+                <input type="text" formControlName="companycode"  />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+               
+                    <button type="submit" class="btn-primary">Add</button> &nbsp;
+                    <button type="reset" (click)="onReset()" class="btn-info">Cancel</button>
+              
+            </td>
+        </tr>
+    </table>
+
+</form>
+</div>
